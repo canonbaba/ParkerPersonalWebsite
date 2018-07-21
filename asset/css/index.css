@@ -1,0 +1,249 @@
+body {
+  position: relative;
+  font-family: 'Quicksand', monospace;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: rgb(172, 172, 172);
+}
+
+ul {
+  list-style-type: square;
+}
+
+.beginning_title {
+  color: rgb(253, 253, 253);
+  position: fixed;
+  top: 32%;
+  left: 38%;
+  z-index: 998;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.beginning_title h3 {
+  font-size: 4vw;
+  text-shadow: 3px 3px 15px rgb(2, 2, 2);
+}
+
+@media screen and (max-width: 420px) {
+  .beginning_title h3 {font-size: 4vh;}
+  .beginning_title {top: 25%; left: 30%;}
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #eee;
+  background-image: url('../images/cover.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  filter:brightness(95%);
+}
+
+.scrollbar_hint {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  z-index: 999;
+  width: 1.8px;
+  height: 60px;
+  background-color: #ffffff;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.scroll_hint {
+  opacity: 1;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: -30px;
+  left: -24px;
+  transition: opacity 2s;
+}
+
+.scrolldot_hint {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 1;
+  position: relative;
+  -webkit-animation-name: scrollHint; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: scrollHint;
+  animation-duration: 2s;
+  animation-iteration-count: 500;
+  background-color: rgb(0, 0, 0);
+  left: -4.25px;
+  margin-top: 15px;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+@-webkit-keyframes scrollHint {
+  0%   { top:-60px; opacity: 0.4;}
+  100%  { top:60px; opacity: 1;}
+
+}
+@keyframes scrollHint {
+  0%   { top:-50px;opacity: 0.4;}
+  100%  { top:10px; opacity: 1;}
+}
+
+.left_side_form {
+  margin-top: 50vh;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+@media screen and (max-width: 420px) {
+  .left_side_form {margin-top: 30vh;}
+}
+
+@media screen and (max-width: 1040px) {
+  .left_side_form {margin-top: 30vh;}
+}
+
+.left_side_form .card {
+  display: flex;
+  margin-top: 10vh;
+  height: 80vh;
+  box-shadow: 7px 7px 25px rgb(2, 2, 2);
+  z-index: 1001;
+}
+
+@media screen and (max-width: 1200px) {
+  .left_side_form .card {height: 75vh;}
+}
+
+.info_photo {
+  margin-top: -15%;
+  margin-left: -25%;
+  width: 40%;
+  height: auto;
+  border-radius: 100px;
+  float: left;
+}
+
+.left_side_form .card-body {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.left_side_form .card-body-title{
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.left_side_form .card-body h3{
+  font-size: 2.5vw;
+  text-shadow: 1px 1px 3px rgb(134, 134, 134);
+}
+
+.left_side_form .card-body h6{
+  font-size: 1.5vw;
+}
+
+.left_side_form .card-body-content span{
+  border-bottom: 1px solid black;
+  width: auto;
+}
+
+.left_side_form .card-body p, h6{
+  font-family: "Jura", monospace;
+}
+
+.left_side_form .card-body ul{
+  font-size: 1vw;
+}
+
+.contact_info {
+  font-family: "Jura", monospace;
+  align-content: flex-end;
+  font-size: 1.2vw;
+  text-align: center;
+  padding-bottom: 1.7vw;
+}
+
+/* for Ipad */
+@media screen and (min-height: 1000px) {
+  .left_side_form .card-body h3{font-size: 3.5vw;}
+  .left_side_form .card-body h6{font-size: 2.3vw;}
+  .left_side_form .card-body ul{font-size: 1.7vw;}
+}
+
+/* for mobile info */
+.mobile-info {
+  position: absolute;
+  top: 25%;
+  left: 7%;
+  right: 7%;
+  margin-top: 5%;
+  opacity: 0;
+  transition: opacity 0.7s;
+  z-index: 1000;
+}
+
+.mobile-info .card {
+  height: 77vh;
+  background-color: rgba(255, 255, 255, 0.918);
+}
+
+.mobile_info_photo {
+  width: 40%;
+  height: auto;
+  border-radius: 100px;
+  float: left;
+  margin-top: -20%;
+  margin-left: -15%;
+}
+
+.mobile_card-body-title {
+  text-align: center;
+}
+
+.mobile-info .card-body {
+  padding: 1.25rem 1.25rem 0 1.25rem;
+}
+
+.mobile-info .card-body-title{
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.mobile-info .card-body h3{
+  font-size: 3.5vh;
+  text-shadow: 2px 2px 4px rgb(134, 134, 134);
+}
+
+.mobile-info .card-body h6{
+  font-size: 2.5vh;
+}
+
+.mobile-info .card-body-content span{
+  border-bottom: 1px solid black;
+  width: auto;
+}
+
+.mobile-info .card-body p, h6{
+  font-family: "Jura", monospace;
+}
+
+.mobile-info .card-body ul{
+  font-size: 1.6vh;
+}
+
+.mobile_contact_info {
+  font-family: "Jura", monospace;
+  align-content: flex-end;
+  font-size: 1.7vh;
+  text-align: center;
+  padding-bottom: 2vh;
+}
